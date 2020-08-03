@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/o_1"
+        android:layout_centerInParent="true"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#000"/>
+    <RelativeLayout
+        android:layout_toLeftOf="@id/o_1"
+        android:layout_above="@+id/o_1"
+        android:id="@+id/o_2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#000"/>
+    <RelativeLayout
+        android:layout_toRightOf="@id/o_1"
+        android:layout_above="@+id/o_1"
+        android:id="@+id/o_3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#000"/>
+    <RelativeLayout
+        android:layout_toLeftOf="@id/o_2"
+        android:layout_above="@+id/o_2"
+        android:id="@+id/o_4"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#000"/>
+    <RelativeLayout
+        android:layout_toRightOf="@id/o_2"
+        android:layout_above="@+id/o_2"
+        android:id="@+id/o_5"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#000"/>
+    <RelativeLayout
+        android:layout_toLeftOf="@id/o_3"
+        android:layout_above="@+id/o_2"
+        android:id="@+id/o_6"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#000"/>
+    <RelativeLayout
+        android:layout_toLeftOf="@id/o_1"
+        android:layout_below="@id/o_1"
+        android:id="@+id/o_7"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#000"/>
+    <RelativeLayout
+        android:layout_toLeftOf="@id/o_1"
+        android:layout_below="@id/o_1"
+        android:id="@+id/o_8"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#000"/>
+    <RelativeLayout
+        android:layout_toLeftOf="@id/o_7"
+        android:layout_below="@id/o_7"
+        android:id="@+id/o_9"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#000"/>
+    <RelativeLayout
+        android:layout_toRightOf="@id/o_9"
+        android:layout_below="@id/o_9"
+        android:id="@+id/o_j"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#000"/>
+    <RelativeLayout
+        android:layout_toRightOf="@id/o_j"
+        android:layout_below="@id/o_j"
+        android:id="@+id/o_k"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#000"/>
+    <RelativeLayout
+        android:layout_toRightOf="@id/o_1"
+        android:layout_below="@id/o_1"
+        android:id="@+id/o_a"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#000"/>
+    <RelativeLayout
+        android:layout_toRightOf="@id/o_a"
+        android:layout_below="@id/o_a"
+        android:id="@+id/o_b"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#000"/>
+    <RelativeLayout
+        android:layout_toLeftOf="@id/o_b"
+        android:layout_below="@id/o_b"
+        android:id="@+id/o_c"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#000"/>
+    <RelativeLayout
+        android:layout_toRightOf="@id/o_3"
+       android:layout_above="@id/o_3"
+        android:id="@+id/o_d"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#000"/>
+
+
+
+
+
+</RelativeLayout>
