@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Unit 6</string>
+    <string name="value">Value</string>
+    <string name="call">Call</string>
+    <string name="browser">Browser</string>
+    <string name="gallery">Gallery</string>
+</resources>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ユニット6</string>
+    <string name="value">値</string>
+    <string name="call">コール</string>
+    <string name="browser">ブラウザ</string>
+    <string name="gallery">ギャラリー</string>
+</resources>

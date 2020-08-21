@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Buổi 6</string>
+    <string name="value">Gía trị</string>
+    <string name="call">Gọi</string>
+    <string name="browser">Trình Duyệt</string>
+    <string name="gallery">Bộ Sưu Tập</string>
+</resources>
