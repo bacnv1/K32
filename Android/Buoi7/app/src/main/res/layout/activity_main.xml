@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_game_play"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="46dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="3dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_avatar" />
+
+            <ImageView
+                android:id="@+id/im_avatar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bg_avatar" />
+
+            <TextView
+                android:id="@+id/tv_heart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/im_avatar"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_heart"
+                android:gravity="center"
+                android:text="5"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:id="@+id/tv_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/bg_coin"
+                android:gravity="center"
+                android:paddingLeft="16dp"
+                android:text="0"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <Button
+        android:id="@+id/btn_next"
+        android:text="Next"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:background="@drawable/bg_next"
+        android:layout_width="200dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:visibility="invisible"
+        android:layout_height="40dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <ImageView
+            android:id="@+id/im_question"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/aomua" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/bg_picture_border" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="32dp"
+        android:paddingBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.t3h.buoi7.views.GameButton
+                android:id="@+id/btn_answer_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_tile_false" />
+
+            <com.t3h.buoi7.views.GameButton
+                android:id="@+id/btn_answer_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_tile_false" />
+
+            <com.t3h.buoi7.views.GameButton
+                android:id="@+id/btn_answer_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_tile_false" />
+
+            <com.t3h.buoi7.views.GameButton
+                android:id="@+id/btn_answer_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_tile_false" />
+
+            <com.t3h.buoi7.views.GameButton
+                android:id="@+id/btn_answer_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_tile_false" />
+
+            <com.t3h.buoi7.views.GameButton
+                android:id="@+id/btn_answer_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_tile_false" />
+
+            <com.t3h.buoi7.views.GameButton
+                android:id="@+id/btn_answer_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_tile_false" />
+
+            <com.t3h.buoi7.views.GameButton
+                android:id="@+id/btn_answer_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_tile_false" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.t3h.buoi7.views.GameButton
+                android:id="@+id/btn_answer_9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <com.t3h.buoi7.views.GameButton
+                android:id="@+id/btn_answer_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_tile_false" />
+
+            <com.t3h.buoi7.views.GameButton
+                android:id="@+id/btn_answer_11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_tile_false" />
+
+            <com.t3h.buoi7.views.GameButton
+                android:id="@+id/btn_answer_12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_tile_false" />
+
+            <com.t3h.buoi7.views.GameButton
+                android:id="@+id/btn_answer_13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_tile_false" />
+
+            <com.t3h.buoi7.views.GameButton
+                android:id="@+id/btn_answer_14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_tile_false" />
+
+            <com.t3h.buoi7.views.GameButton
+                android:id="@+id/btn_answer_15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_tile_false" />
+
+            <com.t3h.buoi7.views.GameButton
+                android:id="@+id/btn_answer_16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_tile_false" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="32dp"
+        android:paddingBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.t3h.buoi7.views.GameButton
+                android:id="@+id/btn_question_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_tile_false" />
+
+            <com.t3h.buoi7.views.GameButton
+                android:id="@+id/btn_question_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_tile_false" />
+
+            <com.t3h.buoi7.views.GameButton
+                android:id="@+id/btn_question_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_tile_false" />
+
+            <com.t3h.buoi7.views.GameButton
+                android:id="@+id/btn_question_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_tile_false" />
+
+            <com.t3h.buoi7.views.GameButton
+                android:id="@+id/btn_question_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_tile_false" />
+
+            <com.t3h.buoi7.views.GameButton
+                android:id="@+id/btn_question_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_tile_false" />
+
+            <com.t3h.buoi7.views.GameButton
+                android:id="@+id/btn_question_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_tile_false" />
+
+            <com.t3h.buoi7.views.GameButton
+                android:id="@+id/btn_question_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_tile_false" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.t3h.buoi7.views.GameButton
+                android:id="@+id/btn_question_9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_tile_false" />
+
+            <com.t3h.buoi7.views.GameButton
+                android:id="@+id/btn_question_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_tile_false" />
+
+            <com.t3h.buoi7.views.GameButton
+                android:id="@+id/btn_question_11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_tile_false" />
+
+            <com.t3h.buoi7.views.GameButton
+                android:id="@+id/btn_question_12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_tile_false" />
+
+            <com.t3h.buoi7.views.GameButton
+                android:id="@+id/btn_question_13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_tile_false" />
+
+            <com.t3h.buoi7.views.GameButton
+                android:id="@+id/btn_question_14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_tile_false" />
+
+            <com.t3h.buoi7.views.GameButton
+                android:id="@+id/btn_question_15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_tile_false" />
+
+            <com.t3h.buoi7.views.GameButton
+                android:id="@+id/btn_question_16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_tile_false" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
