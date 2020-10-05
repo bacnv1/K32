@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_content"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:text="ahjsgdjhasgdhjg ahgdjas as sab asdasb dbsn xb absdbas asbd jasdjka sajs as bdas jdsahd kjahsd kjhasd ash asaj jkahd jas dasj as djas ak da k">
+
+</TextView>
+
+

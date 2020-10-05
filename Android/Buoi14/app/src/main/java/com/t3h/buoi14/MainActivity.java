@@ -12,6 +12,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements FileAdapter.FileI
 
     private EditText edtDownload;
     private Button btnDownload;
+    private WebView webView;
 
     private final String[] PERMISSIONS = {
             Manifest.permission.READ_EXTERNAL_STORAGE,
@@ -78,6 +80,9 @@ public class MainActivity extends AppCompatActivity implements FileAdapter.FileI
         adapter.setListener(this);
         rcFile.setAdapter(adapter);
 
+        webView = findViewById(R.id.web);
+        webView.getSettings().setJavaScriptEnabled(true);
+
         edtDownload = findViewById(R.id.edt_download);
         btnDownload = findViewById(R.id.btn_download);
         btnDownload.setOnClickListener(this);
@@ -107,12 +112,18 @@ public class MainActivity extends AppCompatActivity implements FileAdapter.FileI
     @Override
     public void onClick(View v) {
         String link = edtDownload.getText().toString();
-        String type = ".jpg";
+        String type = ".html";
         manager.download(link, type, this);
     }
 
     @Override
-    public void onSuccess(String path) {
+    public void onSuccess(final String path) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                webView.loadUrl("file:///" + path);
+            }
+        });
     }
 
     @Override

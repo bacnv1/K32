@@ -18,6 +18,10 @@
         android:text="Download"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+    <WebView
+        android:id="@+id/web"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rc_file"
         android:layout_width="match_parent"
