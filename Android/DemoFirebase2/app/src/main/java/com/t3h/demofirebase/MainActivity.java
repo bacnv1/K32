@@ -17,6 +17,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.messaging.FirebaseMessaging;
 import com.t3h.demofirebase.adapter.ChatAdapter;
 import com.t3h.demofirebase.model.Chat;
 
@@ -29,6 +30,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private EditText edtContent;
     private ChatAdapter adapter;
 
+    private FirebaseMessaging fcm = FirebaseMessaging.getInstance();
+
     private DatabaseReference reference = FirebaseDatabase.getInstance()
             .getReference("chat");
 
@@ -38,6 +41,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         initViews();
         reference.addValueEventListener(this);
+        fcm.subscribeToTopic("/topics/chat")
+                .addOnSuccessListener(this)
+                .addOnFailureListener(this);
     }
 
     private void initViews() {
