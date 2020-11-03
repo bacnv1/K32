@@ -79,4 +79,12 @@ public class SongPlayer implements MediaPlayer.OnCompletionListener {
     public void onCompletion(MediaPlayer mediaPlayer) {
         change(1);
     }
+
+    public int getIndex() {
+        return index;
+    }
+
+    public boolean isPlaying() {
+        return player == null ? false : player.isPlaying();
+    }
 }

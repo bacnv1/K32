@@ -5,19 +5,21 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.Manifest;
+import android.content.ComponentName;
+import android.content.Intent;
+import android.content.ServiceConnection;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.IBinder;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements SongAdapter.SongItemListener {
 
-    private SystemData data;
-    private ArrayList<Song> arr;
     private RecyclerView rcSong;
     private SongAdapter adapter;
-    private SongPlayer player;
+    private MP3Service service;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,19 +54,39 @@ public class MainActivity extends AppCompatActivity implements SongAdapter.SongI
         }
     }
 
+    private ServiceConnection connection = new ServiceConnection() {
+        @Override
+        public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
+            MP3Service.MP3Binder binder = (MP3Service.MP3Binder) iBinder;
+            service = binder.getService();
+            adapter.setData(service.getData());
+        }
+
+        @Override
+        public void onServiceDisconnected(ComponentName componentName) {
+
+        }
+    };
+
     private void initViews() {
-        data = new SystemData(this);
-        arr = data.getData();
-        player = new SongPlayer(arr, this);
         rcSong = findViewById(R.id.rc_song);
         adapter = new SongAdapter(getLayoutInflater());
         rcSong.setAdapter(adapter);
-        adapter.setData(arr);
         adapter.setListener(this);
+
+        Intent intent = new Intent(this, MP3Service.class);
+        startService(intent);
+        bindService(intent, connection, BIND_AUTO_CREATE);
     }
 
     @Override
     public void onItemClicked(int position) {
-        player.create(position);
+        service.getPlayer().create(position);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        unbindService(connection);
     }
 }
